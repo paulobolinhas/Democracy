@@ -3,9 +3,15 @@
 Paulo Bolinhas fc56300
 João Santos fc57103
 
-# Ler o pdf - Sobre o projeto.pdf
+# NOTA: Ler o pdf - Sobre o projeto.pdf
 
-# COMO USAR
+--
+
+--
+
+--
+
+# COMO USAR --------------------------------------------------------------------------
 
 # Inicializar a aplicação desktop
 
