@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.controllers.VotacaoDetailsController">
+
+    <center>
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <Label text="Detalhes da Votação" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+            <Label text="ID: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label fx:id="idLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Título: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label fx:id="tituloLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Descrição: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label fx:id="descricaoLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Data/Hora Início: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <Label fx:id="dataHoraInicioLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <Label text="Data/Hora Encerramento: " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Label fx:id="dataHoraFimLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <Label text="Votos Favoráveis: " GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Label fx:id="votosFavoraveisLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <Label text="Votos Desfavoráveis: " GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Label fx:id="votosDesfavoraveisLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <!-- Add more labels for other attributes -->
+			
+			<Button fx:id="favBtn" text="Votar Favorável" onAction="#votarFav" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+		    <Button fx:id="desfavBtn" text="Votar Desfavorável" onAction="#votarDesfav" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+		    <Button fx:id="backBtn" text="Voltar" onAction="#goBack" GridPane.columnIndex="0" GridPane.rowIndex="9" GridPane.columnSpan="2" />
+        </GridPane>
+    </center>
+
+</BorderPane>

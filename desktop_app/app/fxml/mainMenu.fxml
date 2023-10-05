@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.controllers.MainMenuController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="MENU" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+            <Button fx:id="projetosBtn" text="Listar Projetos Lei não Expirados" onAction="#listarProjetos"/>
+            <Button fx:id="votacoesBtn" text="Listar Votações em Curso" onAction="#listarVotacoes"/>
+            <Button fx:id="logout" text="Logout" onAction="#logout"/>
+        </VBox>
+    </center>
+
+</BorderPane>

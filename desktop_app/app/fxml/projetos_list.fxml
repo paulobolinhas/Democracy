@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.controllers.ProjetosController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="Projetos Lei não expirados (clicar em cima destes para mais detalhes):" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+            <TableView fx:id="tableViewProjetos" prefWidth="600">
+                <columns>
+                    <TableColumn text="ID" prefWidth="50">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Título" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="titulo" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Descrição" prefWidth="300">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="descricao" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Data/Hora Validade" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="datahoraValidade" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Subtema" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="subtema" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Delegado Proponente" prefWidth="200">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="delegadoProponente" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Número de Apoiantes" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="numeroApoiantes" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <!-- Add more columns for other attributes -->
+                </columns>
+            </TableView>
+            <Button fx:id="backBtn" text="Voltar" onAction="#goBack"/>
+        </VBox>
+    </center>
+
+</BorderPane>

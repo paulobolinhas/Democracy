@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.controllers.VotacoesController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <Label text="MENU" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+            <TableView fx:id="tableViewVotacoes" prefWidth="600">
+                <columns>
+                    <TableColumn text="ID" prefWidth="50">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Votação" prefWidth="200">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="projetoLeiVotacao" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Data Início" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="dataInicio" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Data Encerramento" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="dataEncerramento" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Votos Favoráveis" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="votosFavoraveis" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Votos Desfavoráveis" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="votosDesfavoraveis" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <!-- Add more columns for other attributes -->
+                </columns>
+            </TableView>
+            <Button fx:id="backBtn" text="Voltar" onAction="#goBack"/>
+        </VBox>
+    </center>
+
+</BorderPane>
