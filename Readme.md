@@ -7,11 +7,11 @@
 
 # NOTAS:
 
+---> Este projeto foi feito no gitlab, como referido na descrição do perfil e colocado aqui.
 
 ---> Ler o Sobre o projeto.pdf para saber em que consiste este projeto.
 
----> Este projeto foi feito no gitlab, como referido na descrição do perfil e colocado aqui.
-
+---> Consultar a pasta docs para conhecer o relatório do projeto.
 
 # COMO USAR:
 
