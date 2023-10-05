@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+    <section>
+        <h2>Projeto Lei:</h2>
+
+        <table>
+            <tr>
+                <th>Título:</th>
+                <td th:text="${projLei.titulo}"></td>
+            </tr>
+            <tr>
+                <th>Descrição:</th>
+                <td th:text="${projLei.descricao}"></td>
+            </tr>
+            <tr>
+                <th>Anexo PDF:</th>
+                <td th:text="${projLei.anexoPDF}"></td>
+            </tr>
+            <tr>
+                <th>Data e hora de validade:</th>
+                <td th:text="${projLei.datahoraValidade}"></td>
+            </tr>
+            <tr>
+                <th>Tema:</th>
+                <td th:text="${projLei.subtema.tituloSubTema}"></td>
+            </tr>
+            <tr>
+                <th>Delegado Proponente:</th>
+                <td th:text="${projLei.delegadoProponente.id}"></td>
+            </tr>
+            
+             <tr>
+                <th>Número de apoios:</th>
+                <td th:text="${projLei.numeroApoiantes}"></td>
+            </tr>
+            
+            <form action="#" th:action="@{/projetosLei/{id}/apoio(id=${projLei.id})}" method="post">
+			    <input type="submit" value="Apoiar" />
+			</form>
+
+        </table>
+
+    </section>
+</body>
+
+</html>

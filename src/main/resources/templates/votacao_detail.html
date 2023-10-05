@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+    <section>
+        <h2>Votação:</h2>
+
+        <table>
+            <tr>
+                <th>Título:</th>
+                <td th:text="${votacao.projetoLeiVotacao.titulo}"></td>
+            </tr>
+            <tr>
+                <th>Descrição:</th>
+                <td th:text="${votacao.projetoLeiVotacao.descricao}"></td>
+            </tr>
+            <tr>
+                <th>Data de início:</th>
+                <td th:text="${votacao.dataInicio}"></td>
+            </tr>
+             <tr>
+                <th>Data de encerramento:</th>
+                <td th:text="${votacao.dataEncerramento}"></td>
+            </tr>
+             <tr>
+                <th>Votos favoráveis:</th>
+                <td th:text="${votacao.votosFavoraveis}"></td>
+            </tr>
+             <tr>
+                <th>Votos desfavoráveis:</th>
+                <td th:text="${votacao.votosDesfavoraveis}"></td>
+            </tr>
+            
+            <h3>Voto por omissão: <span th:text="${votoOmissao}"></span></h3>
+            <form th:action="@{'/votacoesCurso/' + ${votacao.id} + '/votar'}" method="post">
+	            <input type="hidden" name="propostaId" th:value="${votacao.id}" />
+	            <button type="submit" name="tipoVoto" value="favoravel">Votar Favorável</button>
+	            <button type="submit" name="tipoVoto" value="desfavoravel">Votar Desfavorável</button>
+	        </form>
+            
+           
+
+        </table>
+
+    </section>
+</body>
+
+</html>

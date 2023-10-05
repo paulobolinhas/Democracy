@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+    <section>
+        <h2>Apresentar um Projeto de Lei:</h2>
+
+        <div class="error" th:text="${error}"></div>
+
+        <form action="#" th:action="@{/projetoLei/new}" th:object="${projLei}" method="post">
+            <label for="titulo">Título:</label><input name="titulo" th:field="*{titulo}" /><br />
+            <label for="desc">Descrição:</label><input name="desc" th:field="*{descricao}" /><br />
+<!--            <label for="file">File:</label><input name="file" th:field="*{file}" /><br />-->
+			<label for="datahoraValidade">Data de validade:</label><input type="datetime-local" name="date">
+<!--            <label for="subtema">Tema:</label><input name="subtema" /><br />-->
+            
+            <label for="subtema">Tema:</label>
+			<select name="subtema">
+<!--			    <option th:each="tema.titulo : ${temas}" name="subtema"></option>-->
+			     <option th:each="tema : ${temas}" th:value="${tema.titulo}" th:text="${tema.titulo}" name="subtema"></option>
+			</select><br />
+
+            <input type="submit" value="Add" />
+        </form>
+    </section>
+</body>
+
+
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:replace="~{layoutLogin :: layoutLogin(~{::section})}">
+
+<body>
+    <section>
+        <h2>Login:</h2>
+        
+        <form action="#" th:action="@{/login}" method="post">
+            <label for="userId">User ID:</label>
+            <input type="text" name="userId" /><br />
+            
+            <input type="submit" value="Login" />
+        </form>
+    </section>
+</body>
+
+</html>

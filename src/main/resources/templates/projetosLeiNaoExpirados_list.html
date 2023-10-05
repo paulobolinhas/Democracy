@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+    <section>
+        <h2>Projetos Lei não expirados:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Anexo PDF</th>
+                    <th>Data e hora de validade</th>
+                    <th>Tema</th>
+                    <th>Delegado Proponente</th>
+                    <th>Número de apoios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${projetosLeiNaoExpirados.empty}">
+                    <td colspan="7">Não existem projetos lei não expirados</td>
+                </tr>
+                <tr th:each="pl : ${projetosLeiNaoExpirados}">
+                    <td th:text="${pl.id}">...</td>
+                    <td><a th:href="@{/projetosLei/} + ${pl.id}" th:text="${pl.titulo}">...</a></td>
+                    <td th:text="${pl.descricao}">...</td>
+                    <td th:text="${pl.anexoPDF}">...</td>
+                    <td th:text="${pl.datahoraValidade}">...</td>
+                    <td th:text="${pl.subtema.tituloSubTema}">...</td>
+                    <td th:text="${pl.delegadoProponente.id}">...</td>
+                    <td th:text="${pl.numeroApoiantes}">...</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

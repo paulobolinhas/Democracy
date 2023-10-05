@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+    <section>
+        <h2>Escolher Delegados:</h2>
+        
+        <form action="#" th:action="@{/escolherDelegados}" method="post">
+            <label for="tema">Tema:</label>
+            <select name="tema">
+                <option th:each="tema : ${temas}" th:value="${tema.titulo}" th:text="${tema.titulo}"></option>
+            </select><br />
+            
+            <label for="delegado">Delegado:</label>
+            <select name="delegado">
+                <option th:each="delegado : ${delegados}" th:value="${delegado.id}" th:text="${delegado.nome}"></option>
+            </select><br />
+            
+            <input type="submit" value="Escolher" />
+        </form>
+    </section>
+</body>
+
+</html>

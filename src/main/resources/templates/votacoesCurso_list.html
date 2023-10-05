@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::section})}">
+
+<body>
+    <section>
+        <h2>Votações em Curso:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Título</th>
+                    <th>Data de início</th>
+                    <th>Data de encerramento</th>
+                    <th>Projeto Lei associado</th>
+                    <th>Votos favoráveis</th>
+                    <th>Votos desfavoráveis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:if="${votacoesCurso.empty}">
+                    <td colspan="4">Não existem votações em curso</td>
+                </tr>
+                <tr th:each="v : ${votacoesCurso}">
+                    <td th:text="${v.id}">...</td>
+                    <td><a th:href="@{/votacoesCurso/} + ${v.id}" th:text="${v.projetoLeiVotacao.titulo}">...</a></td>
+                    <td th:text="${v.dataInicio}">...</td>
+                    <td th:text="${v.dataEncerramento}">...</td>
+                    <td th:text="${v.projetoLeiVotacao.id}">...</td>
+                    <td th:text="${v.votosFavoraveis}">...</td>
+                    <td th:text="${v.votosDesfavoraveis}">...</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>
