@@ -1,9 +1,10 @@
 # CONTRIBUTORS
 
-Paulo Bolinhas fc56300
-João Santos fc57103
+- Paulo Bolinhas fc56300
 
-Este projeto foi feito no gitlab, como referido na descrição do perfil e colocado aqui.
+- João Santos fc57103
+
+---> Este projeto foi feito no gitlab, como referido na descrição do perfil e colocado aqui.
 
 # NOTA: Ler o Sobre o projeto.pdf para saber em que consiste este projeto.
 
