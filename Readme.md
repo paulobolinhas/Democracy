@@ -5,7 +5,7 @@
 - João Santos fc57103
 
 
-# NOTAS:
+# NOTAS (ANTES DE USAR):
 
 ---> Este projeto foi feito no gitlab, como referido na descrição do perfil e colocado aqui.
 
