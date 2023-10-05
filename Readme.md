@@ -3,7 +3,7 @@
 Paulo Bolinhas fc56300
 João Santos fc57103
 
-# NOTA: Ler o pdf - Sobre o projeto.pdf
+# NOTA: Ler o Sobre o projeto.pdf para saber em que consiste este projeto.
 
 --
 
