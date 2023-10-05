@@ -11,7 +11,9 @@ João Santos fc57103
 
 --
 
-# COMO USAR --------------------------
+--
+
+# COMO USAR:
 
 # Inicializar a aplicação desktop
 
