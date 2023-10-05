@@ -5,16 +5,13 @@
 - João Santos fc57103
 
 
+# NOTAS:
+
+
+---> Ler o Sobre o projeto.pdf para saber em que consiste este projeto.
 
 ---> Este projeto foi feito no gitlab, como referido na descrição do perfil e colocado aqui.
 
-# NOTA: Ler o Sobre o projeto.pdf para saber em que consiste este projeto.
-
---
-
--- 
-
---
 
 # COMO USAR:
 
