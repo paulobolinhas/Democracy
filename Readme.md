@@ -8,9 +8,9 @@ PT
 
 # NOTAS (ANTES DE USAR):
 
----> Este projeto foi feito no gitlab, como referido na descrição do perfil e colocado aqui.
+---> Este projeto foi feito no gitlab.
 
----> Ler o Sobre o projeto.pdf para saber em que consiste este projeto.
+---> Ler 'Sobre o projeto.pdf' para saber em que consiste este projeto.
 
 ---> Consultar a pasta docs para conhecer o relatório do projeto.
 
